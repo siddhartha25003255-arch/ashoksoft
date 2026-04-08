@@ -1,5 +1,4 @@
 "use client";
-"use client";
 export default function Contact() {
   return (
     <main className="min-h-screen py-24 md:py-32 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto relative overflow-hidden flex flex-col items-center">

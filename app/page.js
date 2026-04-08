@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 export default function Home() {
@@ -32,7 +33,10 @@ export default function Home() {
 
           <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6 items-center">
             {/* Secondary CTA */}
-            <Link href="/work" className="group px-8 py-4 rounded-xl text-slate-300 border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:text-white transition-all duration-300 tracking-wide font-medium">
+            <Link
+              href="/work"
+              className="group px-8 py-4 rounded-xl text-slate-300 border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:text-white transition-all duration-300 tracking-wide font-medium"
+            >
               View Our Work
             </Link>
           </div>
@@ -53,7 +57,10 @@ export default function Home() {
 
         <div className="grid md:grid-cols-3 gap-8 relative">
           {/* Service Card 1: Teal Accent */}
-          <Link href="/services/web-architecture" className="glass-card group relative p-8 rounded-2xl border border-white/5 hover:border-[#0F7C7C]/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(15,124,124,0.3)] overflow-hidden block">
+          <Link
+            href="/services/web-architecture"
+            className="glass-card group relative p-8 rounded-2xl border border-white/5 hover:border-[#0F7C7C]/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(15,124,124,0.3)] overflow-hidden block"
+          >
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#0F7C7C] rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-700 pointer-events-none"></div>
             <div className="relative z-10">
               <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 border border-white/10 group-hover:border-[#0F7C7C]/50 transition-colors duration-300 text-teal-400">
@@ -82,7 +89,10 @@ export default function Home() {
           </Link>
 
           {/* Service Card 2: Orange Accent */}
-          <Link href="/services/app-development" className="glass-card group relative p-8 rounded-2xl border border-white/5 hover:border-[#F97316]/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(249,115,22,0.2)] overflow-hidden block">
+          <Link
+            href="/services/app-development"
+            className="glass-card group relative p-8 rounded-2xl border border-white/5 hover:border-[#F97316]/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(249,115,22,0.2)] overflow-hidden block"
+          >
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#F97316] rounded-full blur-[100px] opacity-0 group-hover:opacity-15 transition-opacity duration-700 pointer-events-none"></div>
             <div className="relative z-10">
               <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 border border-white/10 group-hover:border-[#F97316]/50 transition-colors duration-300 text-orange-400">
@@ -111,7 +121,10 @@ export default function Home() {
           </Link>
 
           {/* Service Card 3: Cyan Accent */}
-          <Link href="/services/cloud" className="glass-card group relative p-8 rounded-2xl border border-white/5 hover:border-cyan-500/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(6,182,212,0.3)] overflow-hidden block">
+          <Link
+            href="/services/cloud"
+            className="glass-card group relative p-8 rounded-2xl border border-white/5 hover:border-cyan-500/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(6,182,212,0.3)] overflow-hidden block"
+          >
             <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-600 rounded-full blur-[100px] opacity-0 group-hover:opacity-20 transition-opacity duration-700 pointer-events-none"></div>
             <div className="relative z-10">
               <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 border border-white/10 group-hover:border-cyan-500/50 transition-colors duration-300 text-cyan-400">
