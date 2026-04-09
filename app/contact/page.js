@@ -1,5 +1,8 @@
 "use client";
+import { useState } from "react";
+
 export default function Contact() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
   return (
     <main className="min-h-screen py-24 md:py-32 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto relative overflow-hidden flex flex-col items-center">
       {/* Background Theme Accents */}
@@ -28,6 +31,26 @@ export default function Contact() {
         className="relative z-10 w-full max-w-2xl glass-card rounded-3xl p-8 md:p-12 border border-white/5 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] animate-fade-up"
         style={{ animationDelay: "200ms" }}
       >
+        {isSubmitted ? (
+          <div className="flex flex-col items-center justify-center text-center space-y-6 py-12 animate-fade-in">
+            <div className="w-20 h-20 bg-[#0F7C7C]/20 border border-[#0F7C7C]/50 rounded-full flex items-center justify-center text-teal-400 mb-4 shadow-[0_0_30px_rgba(15,124,124,0.3)] mx-auto relative">
+              <div className="absolute inset-0 bg-[#0F7C7C] rounded-full blur-xl opacity-20 animate-pulse"></div>
+              <svg className="w-10 h-10 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h2 className="text-3xl font-bold text-slate-100">Message Sent!</h2>
+            <p className="text-slate-400 text-lg font-light leading-relaxed max-w-md mx-auto">
+              We have received your message and will contact you soon.
+            </p>
+            <button 
+              onClick={() => setIsSubmitted(false)}
+              className="mt-6 px-8 py-3 rounded-xl border border-white/10 hover:bg-white/5 transition-colors text-slate-300 hover:text-white"
+            >
+              Send another message
+            </button>
+          </div>
+        ) : (
         <form
           className="space-y-6"
           onSubmit={async (e) => {
@@ -55,7 +78,8 @@ export default function Contact() {
             console.log("Response:", res);
 
             if (res.ok) {
-              alert("Message sent!");
+              setIsSubmitted(true);
+              e.target.reset();
             }
           }}
         >
@@ -106,6 +130,7 @@ export default function Contact() {
             <span className="relative">Send Message</span>
           </button>
         </form>
+        )}
       </div>
     </main>
   );
