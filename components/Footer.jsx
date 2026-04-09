@@ -64,7 +64,7 @@ export default function Footer() {
             <ul className="space-y-4 text-sm text-slate-400">
               <li className="flex items-start gap-3 hover:text-teal-300 transition-colors duration-300">
                 <span className="text-[#0F7C7C]">📍</span>
-                <span>Bengaluru, India</span>
+                <span>Uttar Pradesh, India</span>
               </li>
               <li className="flex items-center gap-3 hover:text-teal-300 transition-colors duration-300">
                 <span className="text-[#0F7C7C]">📧</span>
