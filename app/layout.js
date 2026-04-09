@@ -26,10 +26,12 @@ export default function RootLayout({ children }) {
     >
       <body className="relative min-h-screen text-slate-100 overflow-x-hidden bg-[var(--background)] font-sans selection:bg-[#0F7C7C]/30 flex flex-col">
         
-        {/* 🌟 GLOBAL BACKGROUND GLOWS */}
-        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#0F7C7C]/20 blur-[120px] rounded-full animate-blob mix-blend-screen pointer-events-none z-[-1]"></div>
-        <div className="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-[#F97316]/10 blur-[130px] rounded-full animate-blob animation-delay-2000 mix-blend-screen pointer-events-none z-[-1]"></div>
-        <div className="absolute bottom-[-20%] left-[20%] w-[700px] h-[700px] bg-[#0F7C7C]/15 blur-[150px] rounded-full animate-blob animation-delay-4000 mix-blend-screen pointer-events-none z-[-1]"></div>
+        {/* 🌟 GLOBAL ANIMATED BACKGROUND (MATCHING LOGO COLORS) */}
+        <div className="fixed inset-0 z-[-2] pointer-events-none overflow-hidden">
+          <div className="absolute -top-[10%] -left-[10%] w-[70vw] h-[70vw] rounded-full bg-[#0F7C7C]/25 blur-[150px] mix-blend-screen animate-blob-flow"></div>
+          <div className="absolute top-[10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-[#F97316]/20 blur-[150px] mix-blend-screen animate-blob-flow animation-delay-4000"></div>
+          <div className="absolute bottom-[-10%] left-[10%] w-[80vw] h-[80vw] rounded-full bg-[#0F7C7C]/20 blur-[150px] mix-blend-screen animate-blob-flow animation-delay-2000"></div>
+        </div>
 
         {/* ✨ GLOBAL FLOATING PARTICLES */}
         <div className="absolute inset-0 z-[-1] pointer-events-none overflow-hidden">
