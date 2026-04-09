@@ -26,39 +26,12 @@ export default function RootLayout({ children }) {
     >
       <body className="relative min-h-screen text-slate-100 overflow-x-hidden bg-[var(--background)] font-sans selection:bg-[#0F7C7C]/30 flex flex-col">
         
-        {/* 🌟 GLOBAL ANIMATED BACKGROUND (MATCHING LOGO COLORS) */}
-        <div className="fixed inset-0 z-[-2] pointer-events-none overflow-hidden">
-          <div className="absolute -top-[10%] -left-[10%] w-[70vw] h-[70vw] rounded-full bg-[#0F7C7C]/25 blur-[150px] mix-blend-screen animate-blob-flow"></div>
-          <div className="absolute top-[10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-[#F97316]/20 blur-[150px] mix-blend-screen animate-blob-flow animation-delay-4000"></div>
-          <div className="absolute bottom-[-10%] left-[10%] w-[80vw] h-[80vw] rounded-full bg-[#0F7C7C]/20 blur-[150px] mix-blend-screen animate-blob-flow animation-delay-2000"></div>
-        </div>
-
-        {/* ✨ GLOBAL FLOATING PARTICLES */}
-        <div className="absolute inset-0 z-[-1] pointer-events-none overflow-hidden">
-          {[
-            { left: '10%', size: 4, dur: '12s', drift: '30px', delay: '0s' },
-            { left: '25%', size: 6, dur: '15s', drift: '-20px', delay: '2s' },
-            { left: '40%', size: 3, dur: '10s', drift: '40px', delay: '1s' },
-            { left: '60%', size: 5, dur: '18s', drift: '-30px', delay: '4s' },
-            { left: '75%', size: 7, dur: '14s', drift: '20px', delay: '0s' },
-            { left: '90%', size: 4, dur: '16s', drift: '-40px', delay: '3s' },
-            { left: '15%', size: 5, dur: '11s', drift: '10px', delay: '5s' },
-            { left: '50%', size: 6, dur: '13s', drift: '-10px', delay: '2s' },
-            { left: '80%', size: 3, dur: '17s', drift: '50px', delay: '1s' },
-          ].map((p, i) => (
-            <div 
-              key={i} 
-              className="absolute bottom-[-10%] animate-float-particle bg-[#0F7C7C]/40 rounded-full blur-[1px]" 
-              style={{ 
-                left: p.left,
-                width: `${p.size}px`,
-                height: `${p.size}px`,
-                '--duration': p.dur,
-                '--drift': p.drift,
-                animationDelay: p.delay
-              }}
-            ></div>
-          ))}
+        {/* ✨ ENHANCED PREMIUM ANIMATED BACKGROUND */}
+        <div className="fixed inset-0 z-[-2] pointer-events-none overflow-hidden bg-[#0B0F0F]">
+          {/* Subtle slow moving gradient blobs using soft blurs and opacity */}
+          <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#0F7C7C]/20 blur-[120px] mix-blend-screen animate-blob-flow"></div>
+          <div className="absolute top-[20%] right-[-10%] w-[40vw] h-[40vw] rounded-full bg-[#F97316]/10 blur-[100px] mix-blend-screen animate-blob-flow animation-delay-4000"></div>
+          <div className="absolute bottom-[-10%] left-[20%] w-[60vw] h-[60vw] rounded-full bg-[#0F7C7C]/15 blur-[120px] mix-blend-screen animate-blob-flow animation-delay-2000"></div>
         </div>
 
         {/* 🌑 SUBTLE TEXTURE OVERLAY */}
