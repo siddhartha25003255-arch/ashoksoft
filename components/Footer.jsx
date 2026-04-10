@@ -9,7 +9,8 @@ export default function Footer() {
       {/* Decorative Glows inside footer */}
       <div className="absolute bottom-[-20%] left-[10%] w-[300px] h-[300px] bg-[#0F7C7C]/10 blur-[100px] rounded-full mix-blend-screen pointer-events-none z-[-1]"></div>
       <div className="absolute bottom-[-10%] right-[10%] w-[300px] h-[300px] bg-[#F97316]/5 blur-[100px] rounded-full mix-blend-screen pointer-events-none z-[-1]"></div>
-
+      
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#0B0F0F] to-transparent pointer-events-none z-[-1]"></div>
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           
@@ -64,7 +65,7 @@ export default function Footer() {
             <ul className="space-y-4 text-sm text-slate-400">
               <li className="flex items-start gap-3 hover:text-teal-300 transition-colors duration-300">
                 <span className="text-[#0F7C7C]">📍</span>
-                <span>Bengaluru, India</span>
+                <span>Uttar Pradesh, India</span>
               </li>
               <li className="flex items-center gap-3 hover:text-teal-300 transition-colors duration-300">
                 <span className="text-[#0F7C7C]">📧</span>
@@ -72,7 +73,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 hover:text-teal-300 transition-colors duration-300">
                 <span className="text-[#0F7C7C]">📞</span>
-                <a href="tel:+911234567890">+91 123 456 7890</a>
+                <a href="tel:+919958426849">+91 9958426849</a>
               </li>
             </ul>
           </div>
